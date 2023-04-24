@@ -2,7 +2,6 @@
 const express = require("express");
 const port = 8000;
 
-require("dotenv").config();
 const app = express();
 const cookieParser = require("cookie-parser");
 
@@ -41,7 +40,7 @@ app.use(
   session({
     name: "habbit tracker",
     // change secret during before deployment in production
-    secret: process.env.secret,
+    secret:"testpurpose",
     saveUninitialized: false,
     resave: false,
     cookie: {
@@ -49,7 +48,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl: process.env.mongourl,
+        mongoUrl: "mongodb+srv://rishikesh:rishikesh@cluster0.r028t6k.mongodb.net/?retryWrites=true&w=majority",
         autoRemove: "disabled",
       },
       (err) => {
