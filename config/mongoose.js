@@ -1,7 +1,7 @@
-require("dotenv").config();
+
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.mongourl);
+mongoose.connect"mongodb+srv://rishikesh:rishikesh@cluster0.r028t6k.mongodb.net/?retryWrites=true&w=majority");
 
 // aquire connection if it is succesful
 const db = mongoose.connection;
